@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showcase | Rishab Cyber</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root { --bg:#0f111a; --dark:#1a1c29; --primary:#1e90ff; --text:#dcdcdc; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);}
+nav{background:rgba(15,15,30,0.95);backdrop-filter:blur(6px);padding:15px 0;text-align:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--primary);}
+nav a{color:var(--text);margin:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:0.3s;}
+nav a:hover{color:var(--primary);transform:scale(1.05);}
+#hero{padding:80px 20px;text-align:center;}
+#hero h1{color:var(--primary);font-size:36px;margin-bottom:20px;}
+#hero p{color:var(--text);font-size:18px;}
+.section{max-width:900px;margin:40px auto;padding:20px;background:var(--dark);border-radius:12px;box-shadow:0 0 20px rgba(30,144,255,0.2);}
+.section h2{color:var(--primary);margin-bottom:15px;text-align:center;}
+.section p{color:var(--text);text-align:center;}
+.card-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:20px;}
+.card{background:var(--bg);border:1px solid var(--primary);border-radius:12px;padding:15px;width:250px;box-shadow:0 0 15px rgba(30,144,255,0.2);transition:0.3s;text-align:center;cursor:pointer;}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 25px rgba(30,144,255,0.4);}
+.card h3{color:var(--primary);margin-bottom:10px;}
+.card p{color:var(--text);font-size:14px;}
+footer{text-align:center;padding:25px;background:#10121f;margin-top:50px;border-top:1px solid var(--primary);}
+.social a{color:var(--text);margin:0 12px;font-size:20px;text-decoration:none;transition:0.3s;}
+.social a:hover{color:var(--primary);transform:scale(1.1);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" target="_blank">Home</a>
+  <a href="about.html" target="_blank">About</a>
+  <a href="resources.html" target="_blank">Resources</a>
+  <a href="showcase.html" target="_blank">Showcase</a>
+  <a href="tools.html" target="_blank">Tools</a>
+  <a href="contact.html" target="_blank">Contact</a>
+</nav>
+
+<section id="hero">
+  <h1>Showcase</h1>
+  <p>Check out my projects, viral content, and high-engagement cybersecurity reels.</p>
+</section>
+
+<div class="section">
+  <h2>Featured Projects</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Viral Reel 1.8M Views</h3>
+      <p>High-engagement cybersecurity content on Instagram.</p>
+    </div>
+    <div class="card">
+      <h3>Mobile Pentesting Setup</h3>
+      <p>Demonstration of full Termux-based penetration testing workflow.</p>
+    </div>
+    <div class="card">
+      <h3>OSINT Tools Showcase</h3>
+      <p>Examples of open-source intelligence collection projects.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Rishab | Cybersecurity & Tech Creator
+  <div class="social" style="margin-top:10px;">
+    <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
+  </div>
+</footer>
+
+</body>
+</html>

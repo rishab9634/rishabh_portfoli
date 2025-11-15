@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishab Cyber | Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #0f111a;        /* Dark background */
+  --dark: #1a1c29;      /* Card background */
+  --primary: #1e90ff;   /* Soft blue for headings & borders */
+  --secondary: #63b3ed; /* Hover glow / highlight */
+  --text: #dcdcdc;      /* Text color */
+  --white: #ffffff;     
+}
+
+/* GLOBAL */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background: var(--bg); color: var(--text); overflow-x:hidden; }
+
+/* NAVBAR */
+nav {
+  background: rgba(15,15,30,0.95);
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid var(--primary);
+}
+nav a {
+  color: var(--text); margin:0 20px; text-decoration:none;
+  font-weight:600; font-size:16px; transition:0.3s;
+}
+nav a:hover { color: var(--primary); transform: scale(1.05); }
+
+/* HERO */
+#hero {
+  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; background: linear-gradient(135deg, #0f111a, #16182b);
+}
+#hero img {
+  width:180px; height:180px; border-radius:50%;
+  border:3px solid var(--primary);
+  box-shadow:0 0 20px rgba(30,144,255,0.5);
+  margin-bottom:20px;
+}
+#hero h1 {
+  font-size:42px;
+  color: var(--primary);
+}
+#hero p { font-size:18px; color: var(--text); margin-top:10px; }
+
+/* CARDS / SECTIONS PREVIEW */
+.preview {
+  display:flex; flex-wrap:wrap; justify-content:center; max-width:1200px; margin:50px auto; gap:25px; padding:0 20px;
+}
+.card {
+  background: var(--dark); padding:25px; width:250px; border-radius:12px;
+  border-left:4px solid var(--primary);
+  box-shadow:0 0 15px rgba(30,144,255,0.2);
+  text-align:center; transition:0.3s; cursor:pointer;
+}
+.card:hover {
+  transform: translateY(-8px); 
+  box-shadow:0 0 25px rgba(30,144,255,0.4);
+}
+.card h3 { color: var(--primary); margin-bottom:12px; font-size:20px; }
+.card p { color: var(--text); font-size:14px; }
+
+/* FOOTER */
+footer {
+  text-align:center; padding:25px; background:#10121f; margin-top:50px; border-top:1px solid var(--primary);
+}
+.social a {
+  color: var(--text); margin:0 12px; font-size:20px; text-decoration:none; transition:0.3s;
+}
+.social a:hover { color: var(--primary); transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width:768px){ .preview{ flex-direction:column; align-items:center; } }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="home.html" target="_blank">Home</a>
+  <a href="about.html" target="_blank">About</a>
+  <a href="resources.html" target="_blank">Resources</a>
+  <a href="showcase.html" target="_blank">Showcase</a>
+  <a href="tools.html" target="_blank">Tools</a>
+  <a href="contact.html" target="_blank">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <img src="images/rishab.jpg" alt="Rishab Photo" style="width:180px; height:180px; border-radius:50%; border:3px solid #1e90ff; box-shadow:0 0 20px rgba(30,144,255,0.5); margin-bottom:20px;">
+  <h1>Rishabh Cyber</h1>
+  <p>Cybersecurity Learner • Ethical Hacking Explorer • Tech Content Creator</p>
+</section>
+
+<!-- SECTIONS PREVIEW -->
+<div class="preview">
+  <div class="card" onclick="window.open('about.html','_blank')">
+    <h3>About</h3>
+    <p>Learn about my journey, skills, and tech expertise.</p>
+  </div>
+  <div class="card" onclick="window.open('resources.html','_blank')">
+    <h3>Resources</h3>
+    <p>Guides, tutorials, and free tools to learn cybersecurity safely.</p>
+  </div>
+  <div class="card" onclick="window.open('showcase.html','_blank')">
+    <h3>Showcase</h3>
+    <p>My projects, viral content, and high-engagement reels.</p>
+  </div>
+  <div class="card" onclick="window.open('tools.html','_blank')">
+    <h3>Tools</h3>
+    <p>Mobile-based tools, Termux setups, and pentesting workflows.</p>
+  </div>
+  <div class="card" onclick="window.open('contact.html','_blank')">
+    <h3>Contact</h3>
+    <p>Reach out via social platforms or for guidance and queries.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Rishab | Cybersecurity & Tech Creator
+  <div class="social" style="margin-top:10px;">
+    <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
+  </div>
+</footer>
+
+</body>
+</html>

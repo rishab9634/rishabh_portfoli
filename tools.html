@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tools | Rishab Cyber</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg:#0f111a; 
+  --dark:#1a1c29; 
+  --primary:#1e90ff; 
+  --text:#dcdcdc; 
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);}
+
+nav{background:rgba(15,15,30,0.95);backdrop-filter:blur(6px);padding:15px 0;text-align:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--primary);}
+nav a{color:var(--text);margin:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:0.3s;}
+nav a:hover{color:var(--primary);transform:scale(1.05);}
+
+#hero{padding:80px 20px;text-align:center;}
+#hero h1{color:var(--primary);font-size:36px;margin-bottom:15px;}
+#hero p{color:var(--text);font-size:18px;}
+
+.section{max-width:1200px;margin:40px auto;padding:20px;}
+.section h2{color:var(--primary);margin-bottom:25px;text-align:center;}
+
+.cards-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+
+.card{background:var(--dark);border:1px solid var(--primary);border-radius:12px;padding:20px;text-align:center;box-shadow:0 0 15px rgba(30,144,255,0.2);transition:0.3s;cursor:pointer;}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 25px rgba(30,144,255,0.4);}
+.card i{font-size:40px;color:var(--primary);margin-bottom:15px;}
+.card h3{color:var(--primary);margin-bottom:10px;font-size:18px;}
+.card a{color:var(--text);text-decoration:none;font-weight:500;}
+.card a:hover{color:#63b3ed;}
+
+footer{text-align:center;padding:25px;background:#10121f;margin-top:50px;border-top:1px solid var(--primary);}
+.social a{color:var(--text);margin:0 12px;font-size:20px;text-decoration:none;transition:0.3s;}
+.social a:hover{color:var(--primary);transform:scale(1.1);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" target="_blank">Home</a>
+  <a href="about.html" target="_blank">About</a>
+  <a href="resources.html" target="_blank">Resources</a>
+  <a href="showcase.html" target="_blank">Showcase</a>
+  <a href="tools.html" target="_blank">Tools</a>
+  <a href="contact.html" target="_blank">Contact</a>
+</nav>
+
+<section id="hero">
+  <h1>Tools & Operating Systems</h1>
+  <p>Official links to the most useful OS and cybersecurity tools I use for mobile & ethical hacking.</p>
+</section>
+
+<div class="section">
+  <h2>Operating Systems</h2>
+  <div class="cards-container">
+    <div class="card"><i class="fas fa-linux"></i><h3>Kali Linux</h3><a href="https://www.kali.org/" target="_blank">Visit Official Site</a></div>
+    <div class="card"><i class="fas fa-linux"></i><h3>Parrot Security OS</h3><a href="https://www.parrotsec.org/" target="_blank">Visit Official Site</a></div>
+    <div class="card"><i class="fas fa-linux"></i><h3>BlackArch Linux</h3><a href="https://www.blackarch.org/" target="_blank">Visit Official Site</a></div>
+    <div class="card"><i class="fas fa-linux"></i><h3>BackBox Linux</h3><a href="https://www.backbox.org/" target="_blank">Visit Official Site</a></div>
+    <div class="card"><i class="fas fa-linux"></i><h3>Debian Linux</h3><a href="https://www.debian.org/" target="_blank">Visit Official Site</a></div>
+    <div class="card"><i class="fas fa-linux"></i><h3>Ubuntu Linux</h3><a href="https://www.ubuntu.com/" target="_blank">Visit Official Site</a></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Cybersecurity Tools</h2>
+  <div class="cards-container">
+    <div class="card"><i class="fas fa-terminal"></i><h3>Termux</h3><a href="https://termux.com/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-network-wired"></i><h3>Nmap</h3><a href="https://nmap.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-search"></i><h3>Wireshark</h3><a href="https://www.wireshark.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-shield-alt"></i><h3>Metasploit</h3><a href="https://www.metasploit.com/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-wifi"></i><h3>Aircrack-ng</h3><a href="https://aircrack-ng.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-database"></i><h3>SQLMap</h3><a href="https://www.sqlmap.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-bug"></i><h3>Burp Suite</h3><a href="https://portswigger.net/burp" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-user-secret"></i><h3>SET</h3><a href="https://github.com/trustedsec/social-engineer-toolkit" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-hacker-news"></i><h3>Hack The Box</h3><a href="https://www.hackthebox.eu/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-globe"></i><h3>VulnHub</h3><a href="https://www.vulnhub.com/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-bug"></i><h3>OpenVAS</h3><a href="https://www.openvas.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-key"></i><h3>Hashcat</h3><a href="https://www.hashcat.net/hashcat/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-user-shield"></i><h3>Tor Browser</h3><a href="https://www.torproject.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-laptop-code"></i><h3>Exploit DB</h3><a href="https://www.exploit-db.com/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-code"></i><h3>CMSmap</h3><a href="https://github.com/Dionach/CMSmap" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-code-branch"></i><h3>SQLMap GitHub</h3><a href="https://github.com/sqlmapproject/sqlmap" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-bug"></i><h3>Nikto</h3><a href="https://www.nikto.org/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Nexpose</h3><a href="https://www.rapid7.com/products/metasploit/download/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-network-wired"></i><h3>PuTTY</h3><a href="https://www.ssh.com/ssh/putty/" target="_blank">Official Link</a></div>
+    <div class="card"><i class="fas fa-tools"></i><h3>Kali Tools Collection</h3><a href="https://www.kali.org/tools/" target="_blank">Official Link</a></div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Rishab | Cybersecurity & Tech Creator
+  <div class="social" style="margin-top:10px;">
+    <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
+  </div>
+</footer>
+
+</body>
+</html>
