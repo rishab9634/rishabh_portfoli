@@ -3,56 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Rishab Cyber</title>
+<title>Contact | Rishabh Cyber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-:root { --bg:#0f111a; --dark:#1a1c29; --primary:#1e90ff; --text:#dcdcdc; }
+:root{
+  --bg:#0b0f1a;
+  --card:#12172a;
+  --primary:#00f2fe;
+  --accent:#4facfe;
+  --text:#dfe6e9;
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--text);}
-nav{background:rgba(15,15,30,0.95);backdrop-filter:blur(6px);padding:15px 0;text-align:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--primary);}
-nav a{color:var(--text);margin:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:0.3s;}
-nav a:hover{color:var(--primary);transform:scale(1.05);}
-#hero{padding:80px 20px;text-align:center;}
-#hero h1{color:var(--primary);font-size:36px;margin-bottom:20px;}
-#hero p{color:var(--text);font-size:18px;}
-.section{max-width:900px;margin:40px auto;padding:20px;background:var(--dark);border-radius:12px;box-shadow:0 0 20px rgba(30,144,255,0.2);}
-.section h2{color:var(--primary);margin-bottom:15px;text-align:center;}
-.section p{color:var(--text);text-align:center;}
-.contact-links{display:flex;justify-content:center;gap:30px;margin-top:20px;}
-.contact-links a{color:var(--primary);text-decoration:none;font-weight:600;transition:0.3s;}
-.contact-links a:hover{color:#63b3ed; transform:scale(1.05);}
-footer{text-align:center;padding:25px;background:#10121f;margin-top:50px;border-top:1px solid var(--primary);}
-.social a{color:var(--text);margin:0 12px;font-size:20px;text-decoration:none;transition:0.3s;}
-.social a:hover{color:var(--primary);transform:scale(1.1);}
+body{
+  background: radial-gradient(circle at top, #081021, #000);
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(12px);
+  padding:16px 0;
+  text-align:center;
+  border-bottom:1px solid rgba(0,242,254,0.15);
+  z-index:999;
+}
+nav a{
+  color:var(--text);
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:var(--primary);}
+
+/* HERO */
+#hero{
+  padding:90px 20px 40px;
+  text-align:center;
+}
+#hero h1{
+  font-size:44px;
+  background:linear-gradient(to right,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+#hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:17px;
+  color:#bfcde0;
+}
+
+/* CONTACT SECTION */
+.section{
+  max-width:1000px;
+  margin:50px auto;
+  padding:0 20px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
+
+.contact-card{
+  background: rgba(18,23,42,0.95);
+  border:1px solid rgba(0,242,254,0.15);
+  border-radius:20px;
+  padding:35px 20px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  transition:0.4s;
+}
+.contact-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 35px 90px rgba(0,242,254,0.2);
+}
+
+.contact-card i{
+  font-size:40px;
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+.contact-card h3{
+  margin-bottom:10px;
+  color:var(--primary);
+}
+
+.contact-card a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  transition:0.3s;
+}
+.contact-card a:hover{opacity:0.85;}
+
+/* FORM */
+.form-section{
+  max-width:800px;
+  margin:70px auto;
+  background: rgba(18,23,42,0.95);
+  border:1px solid rgba(0,242,254,0.15);
+  border-radius:20px;
+  padding:40px 30px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+.form-section h2{
+  text-align:center;
+  color:var(--primary);
+  margin-bottom:20px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.form-section input,
+.form-section textarea{
+  width:100%;
+  padding:14px 16px;
+  background:#0e1324;
+  border:none;
+  border-radius:12px;
+  color:white;
+  font-size:14px;
+  outline:none;
+}
+
+.form-section textarea{
+  grid-column:1 / -1;
+  min-height:130px;
+  resize:none;
+}
+
+.form-section button{
+  grid-column:1 / -1;
+  border:none;
+  border-radius:50px;
+  padding:14px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#000;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.form-section button:hover{opacity:0.85;}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid rgba(0,242,254,0.15);
+  background:rgba(0,0,0,0.5);
+}
+footer p{color:#bfc9d6; font-size:14px;}
 </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <a href="index.html" target="_blank">Home</a>
-  <a href="about.html" target="_blank">About</a>
-  <a href="resources.html" target="_blank">Resources</a>
-  <a href="showcase.html" target="_blank">Showcase</a>
-  <a href="tools.html" target="_blank">Tools</a>
-  <a href="contact.html" target="_blank">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a>
+  <a href="showcase.html">Showcase</a>
+  <a href="tools.html">Tools</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <h1>Contact Me</h1>
-  <p>Feel free to reach out via social media or for guidance and queries.</p>
+  <p>
+    Feel free to connect with me for collaborations, guidance, cybersecurity discussions, or project work.
+  </p>
 </section>
 
+<!-- CONTACT CARDS -->
 <div class="section">
-  <h2>Connect with Me</h2>
-  <div class="contact-links">
-    <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
-    <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
-    <a href="mailto:rishab@example.com" target="_blank">Email</a>
+  <div class="cards">
+
+    <div class="contact-card">
+      <i class="fab fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>Follow & message me</p>
+      <a href="https://instagram.com/rishab._vision" target="_blank">Open</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fab fa-youtube"></i>
+      <h3>YouTube</h3>
+      <p>Watch my cybersecurity videos</p>
+      <a href="https://youtube.com/@rishabvision" target="_blank">Visit</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p>Send your queries directly</p>
+      <a href="mailto:rishab@example.com">Send Mail</a>
+    </div>
+
   </div>
 </div>
 
+<!-- CONTACT FORM -->
+<div class="form-section">
+  <h2>Send Me a Message</h2>
+
+  <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+    <div class="form-grid">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </form>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  © 2025 Rishab | Cybersecurity & Tech Creator
+  <p>© 2025 Rishabh | Cybersecurity & Tech Creator</p>
 </footer>
 
 </body>
