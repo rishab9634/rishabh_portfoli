@@ -3,136 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rishab Cyber | Portfolio</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+<title>Rishabh Cyber | Portfolio</title>
 
-:root {
-  --bg: #0f111a;        /* Dark background */
-  --dark: #1a1c29;      /* Card background */
-  --primary: #1e90ff;   /* Soft blue for headings & borders */
-  --secondary: #63b3ed; /* Hover glow / highlight */
-  --text: #dcdcdc;      /* Text color */
-  --white: #ffffff;     
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#12172a;
+  --primary:#00f2fe;
+  --accent:#4facfe;
+  --text:#dfe6e9;
+  --white:#ffffff;
 }
 
-/* GLOBAL */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-body { background: var(--bg); color: var(--text); overflow-x:hidden; }
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background: radial-gradient(circle at top, #081021, #000);
+  color:var(--text);
+  overflow-x:hidden;
+}
 
 /* NAVBAR */
-nav {
-  background: rgba(15,15,30,0.95);
-  backdrop-filter: blur(6px);
-  padding: 15px 0;
-  text-align:center;
-  position: sticky;
+nav{
+  position:sticky;
   top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(0,242,254,0.2);
+  padding:16px 0;
+  text-align:center;
   z-index:999;
-  border-bottom:1px solid var(--primary);
 }
-nav a {
-  color: var(--text); margin:0 20px; text-decoration:none;
-  font-weight:600; font-size:16px; transition:0.3s;
+nav a{
+  color:var(--text);
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.3px;
+  position:relative;
 }
-nav a:hover { color: var(--primary); transform: scale(1.05); }
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transition:0.4s;
+}
+nav a:hover::after{width:100%;}
+nav a:hover{color:var(--primary);}
 
 /* HERO */
-#hero {
-  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-  text-align:center; background: linear-gradient(135deg, #0f111a, #16182b);
+#hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:
+    radial-gradient(circle at center, rgba(0,242,254,0.07), transparent 60%);
+  animation: fadeIn 1.2s ease forwards;
 }
-#hero img {
-  width:180px; height:180px; border-radius:50%;
-  border:3px solid var(--primary);
-  box-shadow:0 0 20px rgba(30,144,255,0.5);
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+#hero img{
+  width:190px;
+  height:190px;
+  object-fit:cover;
+  border-radius:50%;
+  padding:5px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  box-shadow:0 0 60px rgba(0,242,254,0.5);
   margin-bottom:20px;
 }
-#hero h1 {
-  font-size:42px;
-  color: var(--primary);
-}
-#hero p { font-size:18px; color: var(--text); margin-top:10px; }
 
-/* CARDS / SECTIONS PREVIEW */
-.preview {
-  display:flex; flex-wrap:wrap; justify-content:center; max-width:1200px; margin:50px auto; gap:25px; padding:0 20px;
+#hero h1{
+  font-size:52px;
+  background:linear-gradient(to right,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
-.card {
-  background: var(--dark); padding:25px; width:250px; border-radius:12px;
-  border-left:4px solid var(--primary);
-  box-shadow:0 0 15px rgba(30,144,255,0.2);
-  text-align:center; transition:0.3s; cursor:pointer;
+
+#hero p{
+  margin-top:12px;
+  font-size:18px;
+  color:#bfc9d6;
+  max-width:600px;
 }
-.card:hover {
-  transform: translateY(-8px); 
-  box-shadow:0 0 25px rgba(30,144,255,0.4);
+
+/* SECTION CARDS */
+.preview{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  max-width:1200px;
+  margin:60px auto;
+  gap:25px;
+  padding:0 20px;
 }
-.card h3 { color: var(--primary); margin-bottom:12px; font-size:20px; }
-.card p { color: var(--text); font-size:14px; }
+
+.card{
+  background: rgba(18,23,42,0.8);
+  backdrop-filter: blur(6px);
+  padding:30px 22px;
+  text-align:center;
+  border-radius:18px;
+  border:1px solid rgba(0,242,254,0.15);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  transition:0.5s ease;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(0,242,254,0.15),transparent);
+  transform:translateX(-100%);
+  transition:0.6s;
+}
+.card:hover::before{transform:translateX(100%);}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 30px 80px rgba(0,242,254,0.25);
+  border-color:rgba(0,242,254,0.4);
+}
+
+.card h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:var(--primary);
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.6;
+  color:#bfc9d6;
+}
 
 /* FOOTER */
-footer {
-  text-align:center; padding:25px; background:#10121f; margin-top:50px; border-top:1px solid var(--primary);
+footer{
+  text-align:center;
+  padding:35px 20px;
+  background:rgba(0,0,0,0.5);
+  border-top:1px solid rgba(0,242,254,0.15);
 }
-.social a {
-  color: var(--text); margin:0 12px; font-size:20px; text-decoration:none; transition:0.3s;
+
+.social a{
+  display:inline-block;
+  margin:12px 14px 0;
+  color:#bfc9d6;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
 }
-.social a:hover { color: var(--primary); transform: scale(1.1); }
+
+.social a:hover{
+  color:var(--primary);
+  transform:translateY(-2px);
+}
 
 /* RESPONSIVE */
-@media (max-width:768px){ .preview{ flex-direction:column; align-items:center; } }
-
+@media(max-width:768px){
+  #hero h1{font-size:38px;}
+  #hero p{font-size:16px;}
+}
 </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
-  <a href="home.html" target="_blank">Home</a>
-  <a href="about.html" target="_blank">About</a>
-  <a href="resources.html" target="_blank">Resources</a>
-  <a href="showcase.html" target="_blank">Showcase</a>
-  <a href="tools.html" target="_blank">Tools</a>
-  <a href="contact.html" target="_blank">Contact</a>
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a>
+  <a href="showcase.html">Showcase</a>
+  <a href="tools.html">Tools</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section id="hero">
-  <img src="images/rishab.jpg" alt="Rishab Photo" style="width:180px; height:180px; border-radius:50%; border:3px solid #1e90ff; box-shadow:0 0 20px rgba(30,144,255,0.5); margin-bottom:20px;">
+  <img src="images/rishab.jpg" alt="Rishabh">
   <h1>Rishabh Cyber</h1>
   <p>Cybersecurity Learner • Ethical Hacking Explorer • Tech Content Creator</p>
 </section>
 
-<!-- SECTIONS PREVIEW -->
+<!-- CARDS -->
 <div class="preview">
-  <div class="card" onclick="window.open('about.html','_blank')">
+  <div class="card" onclick="location.href='about.html'">
     <h3>About</h3>
-    <p>Learn about my journey, skills, and tech expertise.</p>
+    <p>My journey, skills and vision in cybersecurity.</p>
   </div>
-  <div class="card" onclick="window.open('resources.html','_blank')">
+  <div class="card" onclick="location.href='resources.html'">
     <h3>Resources</h3>
-    <p>Guides, tutorials, and free tools to learn cybersecurity safely.</p>
+    <p>Free guides, ethical tools & learning materials.</p>
   </div>
-  <div class="card" onclick="window.open('showcase.html','_blank')">
+  <div class="card" onclick="location.href='showcase.html'">
     <h3>Showcase</h3>
-    <p>My projects, viral content, and high-engagement reels.</p>
+    <p>Projects, reels, and creative tech content.</p>
   </div>
-  <div class="card" onclick="window.open('tools.html','_blank')">
+  <div class="card" onclick="location.href='tools.html'">
     <h3>Tools</h3>
-    <p>Mobile-based tools, Termux setups, and pentesting workflows.</p>
+    <p>Mobile pentesting & Termux workflows.</p>
   </div>
-  <div class="card" onclick="window.open('contact.html','_blank')">
+  <div class="card" onclick="location.href='contact.html'">
     <h3>Contact</h3>
-    <p>Reach out via social platforms or for guidance and queries.</p>
+    <p>Let’s connect and grow together.</p>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  © 2025 Rishab | Cybersecurity & Tech Creator
-  <div class="social" style="margin-top:10px;">
-    <a href="https://www.instagram.com/rishabh_cyber?igsh=bWc0b2RkNjNpd3Q4" target="_blank">Instagram</a>
+  <p>© 2025 Rishabh | Cybersecurity & Tech Creator</p>
+  <div class="social">
+    <a href="https://www.instagram.com/rishabh_cyber" target="_blank">Instagram</a>
     <a href="https://www.youtube.com/@Rishabh_Cyber" target="_blank">YouTube</a>
   </div>
 </footer>
