@@ -3,70 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | Rishab Cyber</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+<title>Home | Rishabh Cyber</title>
 
-:root {
-  --bg: #0f111a;
-  --dark: #1a1c29;
-  --primary: #1e90ff;
-  --secondary: #63b3ed;
-  --text: #dcdcdc;
-  --white: #ffffff;
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#12172a;
+  --primary:#00f2fe;
+  --accent:#4facfe;
+  --text:#dfe6e9;
 }
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-body { background: var(--bg); color: var(--text); }
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background: radial-gradient(circle at top, #081021, #000);
+  color:var(--text);
+}
 
 /* NAVBAR */
-nav { background: rgba(15,15,30,0.95); backdrop-filter: blur(6px); padding: 15px 0; text-align:center; position: sticky; top:0; z-index:999; border-bottom:1px solid var(--primary); }
-nav a { color: var(--text); margin:0 20px; text-decoration:none; font-weight:600; font-size:16px; transition:0.3s; }
-nav a:hover { color: var(--primary); transform: scale(1.05); }
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid rgba(0,242,254,0.2);
+  padding:16px 0;
+  text-align:center;
+  z-index:999;
+}
+nav a{
+  color:var(--text);
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transition:.4s;
+}
+nav a:hover::after{width:100%;}
+nav a:hover{color:var(--primary);}
 
 /* HERO */
-#hero { padding:100px 20px; text-align:center; }
-#hero h1 { color: var(--primary); font-size:36px; margin-bottom:20px; }
-#hero p { color: var(--text); font-size:18px; }
+#hero{
+  padding:120px 20px 80px;
+  text-align:center;
+  background:
+    radial-gradient(circle at center, rgba(0,242,254,0.06), transparent 60%);
+  animation: fadeIn 1.2s forwards;
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
 
-/* CONTENT CARDS */
-.section { max-width:900px; margin:50px auto; padding:20px; background: var(--dark); border-radius:12px; box-shadow:0 0 20px rgba(30,144,255,0.2); }
-.section h2 { color: var(--primary); margin-bottom:15px; text-align:center; }
-.section p { color: var(--text); text-align:center; }
+#hero h1{
+  font-size:54px;
+  background:linear-gradient(to right,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:15px;
+}
+
+#hero p{
+  font-size:18px;
+  color:#bfc9d6;
+}
+
+/* SECTIONS */
+.section{
+  max-width:1000px;
+  margin:60px auto;
+  padding:40px 30px;
+  background: rgba(18,23,42,0.85);
+  backdrop-filter: blur(8px);
+  border-radius:22px;
+  border:1px solid rgba(0,242,254,0.15);
+  box-shadow:0 25px 60px rgba(0,0,0,0.45);
+  transition:0.4s ease;
+}
+.section:hover{
+  transform:translateY(-8px);
+  box-shadow:0 40px 90px rgba(0,242,254,0.15);
+}
+
+.section h2{
+  font-size:30px;
+  text-align:center;
+  margin-bottom:20px;
+  color:var(--primary);
+}
+
+.section p{
+  text-align:center;
+  line-height:1.9;
+  font-size:16px;
+  color:#cfe6ff;
+}
 
 /* FOOTER */
-footer { text-align:center; padding:25px; background:#10121f; margin-top:50px; border-top:1px solid var(--primary); }
-.social a { color: var(--text); margin:0 12px; font-size:20px; text-decoration:none; transition:0.3s; }
-.social a:hover { color: var(--primary); transform: scale(1.1); }
+footer{
+  text-align:center;
+  padding:35px 20px;
+  background:rgba(0,0,0,0.5);
+  border-top:1px solid rgba(0,242,254,0.15);
+}
+
+.social a{
+  display:inline-block;
+  margin:12px 14px 0;
+  color:#bfc9d6;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+.social a:hover{
+  color:var(--primary);
+  transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  #hero h1{font-size:38px;}
+  #hero p{font-size:16px;}
+  .section{padding:28px 20px;}
+}
 </style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <nav>
-  <a href="index.html" target="_blank">Home</a>
-  <a href="about.html" target="_blank">About</a>
-  <a href="resources.html" target="_blank">Resources</a>
-  <a href="showcase.html" target="_blank">Showcase</a>
-  <a href="tools.html" target="_blank">Tools</a>
-  <a href="contact.html" target="_blank">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a>
+  <a href="showcase.html">Showcase</a>
+  <a href="tools.html">Tools</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <h1>Welcome to My Portfolio</h1>
-  <p>Explore my journey in cybersecurity, mobile pentesting, and tech content creation.</p>
+  <h1>Welcome to My Cyber Portfolio</h1>
+  <p>Explore my journey in cybersecurity, ethical hacking, and tech content creation.</p>
 </section>
 
-<!-- CONTENT -->
+<!-- MAIN CONTENT -->
 <div class="section">
-  <h2>Introduction</h2>
-  <p>I am Rishabh , a cybersecurity learner and content creator focusing on ethical hacking, Termux tools, OSINT, and mobile-based penetration testing. Here, you can explore resources, showcase of my projects, tools I use, and contact me directly.</p>
+  <h2>Who Am I?</h2>
+  <p>
+    I am Rishabh, a passionate cybersecurity learner and digital creator. 
+    I work with ethical hacking, OSINT, Termux tools, and mobile-based penetration testing.
+    Here you will find my resources, tools, and real-world learning journey in one place.
+  </p>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  © 2025 Rishab | Cybersecurity & Tech Creator
-  <div class="social" style="margin-top:10px;">
+  <p>© 2025 Rishabh | Cybersecurity & Tech Creator</p>
+  <div class="social">
     <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
     <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
   </div>
