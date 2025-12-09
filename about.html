@@ -3,54 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Rishab Cyber</title>
+<title>About | Rishabh Cyber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-:root { --bg:#0f111a; --dark:#1a1c29; --primary:#1e90ff; --text:#dcdcdc; }
+:root { 
+  --bg:#0b0f1a; 
+  --dark:#12172a; 
+  --primary:#00f2fe; 
+  --text:#dfe6e9; 
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--text);}
-nav{background:rgba(15,15,30,0.95);backdrop-filter:blur(6px);padding:15px 0;text-align:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--primary);}
-nav a{color:var(--text);margin:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:0.3s;}
-nav a:hover{color:var(--primary);transform:scale(1.05);}
-#hero{padding:80px 20px;text-align:center;}
-#hero h1{color:var(--primary);font-size:36px;margin-bottom:20px;}
-#hero p{color:var(--text);font-size:18px;}
-.section{max-width:900px;margin:40px auto;padding:20px;background:var(--dark);border-radius:12px;box-shadow:0 0 20px rgba(30,144,255,0.2);}
-.section h2{color:var(--primary);margin-bottom:15px;text-align:center;}
-.section p{color:var(--text);text-align:center;}
-footer{text-align:center;padding:25px;background:#10121f;margin-top:50px;border-top:1px solid var(--primary);}
-.social a{color:var(--text);margin:0 12px;font-size:20px;text-decoration:none;transition:0.3s;}
-.social a:hover{color:var(--primary);transform:scale(1.1);}
+body{background: radial-gradient(circle at top, #081021, #000);color:var(--text);}
+
+nav{
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  padding:15px 0;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid rgba(0,242,254,0.2);
+}
+nav a{
+  color:var(--text);
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+  transition:0.3s;
+}
+nav a:hover{color:var(--primary);}
+
+#hero{
+  padding:90px 20px 40px;
+  text-align:center;
+}
+#hero h1{
+  font-size:46px;
+  background:linear-gradient(to right,var(--primary),#4facfe);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:15px;
+}
+#hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  color:#bfcde0;
+}
+
+.section{
+  max-width:1000px;
+  margin:40px auto;
+  padding:40px 30px;
+  background: rgba(18,23,42,0.9);
+  border-radius:20px;
+  border:1px solid rgba(0,242,254,0.15);
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  transition:0.4s;
+}
+.section:hover{
+  transform:translateY(-5px);
+  box-shadow:0 30px 80px rgba(0,242,254,0.2);
+}
+
+.section h2{
+  color:var(--primary);
+  margin-bottom:20px;
+  text-align:center;
+  font-size:28px;
+}
+
+.section p{
+  text-align:center;
+  line-height:1.9;
+  font-size:16px;
+  color:#cfe6ff;
+}
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  margin-top:60px;
+  border-top:1px solid rgba(0,242,254,0.15);
+  background:rgba(0,0,0,0.5);
+}
+.social a{
+  color:#bfc9d6;
+  margin:0 12px;
+  font-size:18px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.social a:hover{color:var(--primary);}
 </style>
 </head>
+
 <body>
 
 <nav>
-  <a href="index.html" target="_blank">Home</a>
-  <a href="about.html" target="_blank">About</a>
-  <a href="resources.html" target="_blank">Resources</a>
-  <a href="showcase.html" target="_blank">Showcase</a>
-  <a href="tools.html" target="_blank">Tools</a>
-  <a href="contact.html" target="_blank">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a>
+  <a href="showcase.html">Showcase</a>
+  <a href="tools.html">Tools</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <h1>About Me</h1>
-  <p>Get to know my journey, skills, and passion for cybersecurity and tech content creation.</p>
+  <p>
+    Learn more about my journey, mindset, passion for cybersecurity, and my mission to 
+    spread ethical hacking knowledge in a positive and legal way.
+  </p>
 </section>
 
+<!-- JOURNEY -->
 <div class="section">
-  <h2>My Journey</h2>
-  <p>I started exploring cybersecurity through mobile-based learning, Termux tools, and ethical hacking. Over time, I also started creating engaging tech and cybersecurity content for social platforms.</p>
+  <h2>My Journey in Cybersecurity</h2>
+  <p>
+    My name is Rishabh, and I started my journey in cybersecurity with a strong curiosity about 
+    how the digital world works behind the scenes. I began learning through mobile platforms, 
+    experimenting with Termux, Linux environments, and basic networking concepts. 
+    Over time, I developed a deep interest in ethical hacking, cybersecurity awareness, 
+    and how systems can be protected from real-world threats.
+    <br><br>
+    I believe learning security is not about breaking systems, but about understanding them deeply 
+    so that we can make technology safer for everyone. My journey is focused on legal, ethical, 
+    and responsible cybersecurity practices.
+  </p>
 </div>
 
+<!-- SKILLS -->
 <div class="section">
-  <h2>Skills & Expertise</h2>
-  <p>Mobile penetration testing, Termux operations, OSINT, ethical hacking basics, network fundamentals, and content creation for Instagram & YouTube.</p>
+  <h2>Skills & Areas of Interest</h2>
+  <p>
+    I actively work and practice in multiple domains of cybersecurity and technology, including:
+    <br><br>
+    • Ethical Hacking Fundamentals<br>
+    • Mobile Penetration Testing (For Educational Labs Only)<br>
+    • Termux & Linux Based Tools<br>
+    • OSINT (Open Source Intelligence)<br>
+    • Networking Basics & Web Security Concepts<br>
+    • Bug Bounty Learning Platforms (HTB, TryHackMe, Labs)<br>
+    • Content Creation for Tech & Cybersecurity Awareness<br><br>
+    Along with technical skills, I am also passionate about teaching, simplifying complex topics, 
+    and creating valuable content for beginners who want to enter the cybersecurity field.
+  </p>
 </div>
 
+<!-- VISION -->
+<div class="section">
+  <h2>My Vision</h2>
+  <p>
+    My long-term goal is to become a skilled cybersecurity professional and security researcher who 
+    can help organizations and individuals stay safe online. I aim to build a strong learning community 
+    where students and beginners can learn cybersecurity in a simple, ethical, and legal way without confusion.
+    <br><br>
+    Through my portfolio, social media, and content, I want to inspire more people to enter the world 
+    of cybersecurity with the right mindset and responsible approach.
+  </p>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  © 2025 Rishab | Cybersecurity & Tech Creator
+  <p>© 2025 Rishabh | Cybersecurity & Tech Creator</p>
   <div class="social" style="margin-top:10px;">
     <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
     <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
