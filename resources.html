@@ -3,54 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources | Rishab Cyber</title>
+<title>Resources | Rishabh Cyber</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-:root { --bg:#0f111a; --dark:#1a1c29; --primary:#1e90ff; --text:#dcdcdc; }
+:root{
+  --bg:#0b0f1a;
+  --card:#12172a;
+  --primary:#00f2fe;
+  --accent:#4facfe;
+  --text:#dfe6e9;
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--text);}
-nav{background:rgba(15,15,30,0.95);backdrop-filter:blur(6px);padding:15px 0;text-align:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--primary);}
-nav a{color:var(--text);margin:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:0.3s;}
-nav a:hover{color:var(--primary);transform:scale(1.05);}
-#hero{padding:80px 20px;text-align:center;}
-#hero h1{color:var(--primary);font-size:36px;margin-bottom:20px;}
-#hero p{color:var(--text);font-size:18px;}
-.section{max-width:900px;margin:40px auto;padding:20px;background:var(--dark);border-radius:12px;box-shadow:0 0 20px rgba(30,144,255,0.2);}
-.section h2{color:var(--primary);margin-bottom:15px;text-align:center;}
-.section p{color:var(--text);text-align:center;}
-footer{text-align:center;padding:25px;background:#10121f;margin-top:50px;border-top:1px solid var(--primary);}
-.social a{color:var(--text);margin:0 12px;font-size:20px;text-decoration:none;transition:0.3s;}
-.social a:hover{color:var(--primary);transform:scale(1.1);}
+body{
+  background: radial-gradient(circle at top, #081021, #000);
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(12px);
+  padding:16px 0;
+  text-align:center;
+  border-bottom:1px solid rgba(0,242,254,0.2);
+  z-index:999;
+}
+nav a{
+  color:var(--text);
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+nav a:hover{color:var(--primary);}
+
+/* HERO */
+#hero{
+  padding:90px 20px 40px;
+  text-align:center;
+}
+#hero h1{
+  font-size:44px;
+  background:linear-gradient(to right,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+#hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:17px;
+  color:#bfcde0;
+}
+
+/* SECTIONS */
+.section{
+  max-width:1000px;
+  margin:50px auto;
+  padding:40px 30px;
+  background: rgba(18,23,42,0.9);
+  border-radius:20px;
+  border:1px solid rgba(0,242,254,0.15);
+  box-shadow:0 25px 60px rgba(0,0,0,0.45);
+  transition:0.4s;
+}
+.section:hover{
+  transform:translateY(-5px);
+}
+
+.section h2{
+  text-align:center;
+  color:var(--primary);
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.section p{
+  text-align:center;
+  font-size:16px;
+  line-height:1.9;
+  color:#cfe6ff;
+}
+
+/* RESOURCE LIST */
+.resource-list{
+  margin-top:20px;
+  text-align:left;
+  max-width:800px;
+  margin-inline:auto;
+}
+.resource-list li{
+  margin:12px 0;
+  list-style:none;
+  padding-left:25px;
+  position:relative;
+}
+.resource-list li::before{
+  content:"✔";
+  color:var(--primary);
+  position:absolute;
+  left:0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  margin-top:60px;
+  border-top:1px solid rgba(0,242,254,0.15);
+  background:rgba(0,0,0,0.5);
+}
+.social a{
+  color:#bfc9d6;
+  margin:0 12px;
+  font-size:18px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.social a:hover{color:var(--primary);}
+
 </style>
 </head>
+
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="index.html" target="_blank">Home</a>
-  <a href="about.html" target="_blank">About</a>
-  <a href="resources.html" target="_blank">Resources</a>
-  <a href="showcase.html" target="_blank">Showcase</a>
-  <a href="tools.html" target="_blank">Tools</a>
-  <a href="contact.html" target="_blank">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a>
+  <a href="showcase.html">Showcase</a>
+  <a href="tools.html">Tools</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
-  <h1>Resources</h1>
-  <p>Explore my recommended tools, guides, and tutorials for learning cybersecurity safely.</p>
+  <h1>Learning Resources</h1>
+  <p>
+    Here you will find hand-picked learning resources that helped me grow in cybersecurity, ethical hacking, and digital security awareness.
+  </p>
 </section>
 
+<!-- GUIDES -->
 <div class="section">
   <h2>Guides & Tutorials</h2>
-  <p>Step-by-step guides on mobile hacking, Termux, OSINT techniques, and ethical hacking basics.</p>
+  <p>
+    I create and recommend step-by-step learning guides that are focused on clarity, practicality, and ethical usage. 
+    These resources are ideal for beginners who want to build strong foundations in cybersecurity.
+  </p>
+
+  <ul class="resource-list">
+    <li>Beginner-friendly ethical hacking roadmaps</li>
+    <li>Step-by-step Termux learning guides</li>
+    <li>Introduction to Linux for security testing</li>
+    <li>Basics of networking and internet security</li>
+    <li>OSINT fundamentals for online investigations</li>
+    <li>Web security concepts and common vulnerabilities</li>
+  </ul>
 </div>
 
+<!-- TOOLS -->
 <div class="section">
-  <h2>Useful Tools</h2>
-  <p>Mobile-based pentesting tools, Termux scripts, and Android security apps I personally use for learning and practice.</p>
+  <h2>Useful Learning Tools</h2>
+  <p>
+    These are the platforms and tools I recommend for learning cybersecurity in a legal, safe, and practical way. 
+    All of these are widely used by professionals and beginners worldwide.
+  </p>
+
+  <ul class="resource-list">
+    <li>TryHackMe – Interactive cybersecurity labs</li>
+    <li>Hack The Box – Real-world hacking practice environment</li>
+    <li>Kali Linux – Security testing operating system</li>
+    <li>Nmap – Network scanning and discovery tool</li>
+    <li>Wireshark – Network traffic analysis tool</li>
+    <li>Burp Suite – Web application testing proxy</li>
+    <li>Metasploit Framework – Penetration testing framework</li>
+  </ul>
 </div>
 
+<!-- PRACTICE -->
+<div class="section">
+  <h2>Practice & Skill Development</h2>
+  <p>
+    Real learning happens through practice. I strongly focus on legal practice platforms and lab-based learning 
+    where you can safely test your skills without harming any real-world systems.
+  </p>
+
+  <ul class="resource-list">
+    <li>OverTheWire – War games for beginners</li>
+    <li>PortSwigger Web Security Academy</li>
+    <li>VulnHub – Downloadable vulnerable machines</li>
+    <li>CTF platforms and online cybersecurity challenges</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  © 2025 Rishab | Cybersecurity & Tech Creator
+  <p>© 2025 Rishabh | Cybersecurity & Tech Creator</p>
   <div class="social" style="margin-top:10px;">
     <a href="https://instagram.com/rishab._vision" target="_blank">Instagram</a>
     <a href="https://youtube.com/@rishabvision" target="_blank">YouTube</a>
