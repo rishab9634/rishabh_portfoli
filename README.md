@@ -83,6 +83,7 @@ Continuously expanding expertise in cybersecurity technologies:
 - **IoT Security** | Mobile Application Security
 - **Quantum Cryptography** | Post-Quantum Security
 - **Network Security Engineering** | Advanced Firewall Configuration
+- **Mythos Info** | Its very dangerous for tech world
 
 ***
 
@@ -95,6 +96,7 @@ Continuously expanding expertise in cybersecurity technologies:
 - AI Automation Engineer
 - Full-Stack Developer (Frontend & Backend)
 - Linux & OS Security Expert
+- AI Agents 
 
 ***
 
@@ -112,13 +114,7 @@ Continuously expanding expertise in cybersecurity technologies:
 
 ```
 🔒 Cybersecurity Expert    🐛 Bug Bounty Hunter    🔍 Digital Forensics
-🤖 AI Automation    🖥️ Linux Security    🚀 Full-Stack Developer
-```
+🤖 AI Automation    🖥️ Linux Security    🚀 Full-Stack Developer 🔥Researcher of Cybersecurity 😎 Cybersecurity Content Creator ⛓️ Blockchain 📌 Mythos research in progress
 
-***
-
-<p align="center">
-  <em>Professional Cybersecurity Expert & Full-Stack Developer</em>
-  <br>
-  🔐 Security | 🐛 Bug Bounty | 🤖 AI | 🖥️ Linux | 🚀 Full-Stack Developer 
+## 🇮🇳 CODEVAA Fully uncensored AI model 
 
